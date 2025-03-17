@@ -24,13 +24,18 @@
                 document.querySelector("input[name='mask_f0_0']").value = "255.255.255.0";
                 document.querySelector("input[name='ip_f0_1']").value = "192.168.2.1";
                 document.querySelector("input[name='mask_f0_1']").value = "255.255.255.0";
+                document.querySelector("input[name='ip_s0_0']").value = "192.168.2.3";
+                document.querySelector("input[name='ip_s0_1']").value = "255.255.255.0";
+                document.querySelector("input[name='crate']").value = "64000";
+                document.querySelector("input[name='ip_s1_0']").value = "192.168.2.4";
+                document.querySelector("input[name='ip_s1_1']").value = "255.255.255.0";
             }
         }
     </script>
 </head>
 <body>
     <div class="container">
-        <h2>Configuració inicial del Router CISCO 2811 - Fase C</h2>
+        <h2>Configuració inicial del Router CISCO 2811 - Fase D1</h2>
         <form action="prueba.php" method="post">
             <label>Hostname: <input type="text" name="hostname" oninput="autoFill()" required></label>
             <label>Contrasenya privilegiat: <input type="password" name="enable_secret" required></label>
@@ -43,6 +48,11 @@
             <label>Màscara: <input type="text" name="mask_f0_0" required></label>
             <label>IP FastEthernet0/1: <input type="text" name="ip_f0_1" required></label>
             <label>Màscara: <input type="text" name="mask_f0_1" required></label>
+            <label>IP Serial 0/0/0: <input type="text" name="ip_s0_0" required></label>
+            <label>Màscara Serial 0/0/0: <input type="text" name="ip_s0_1" required></label>
+            <label>Clock rate Serial 0/0/0: <input type="text" name="crate" required></label>
+            <label>IP Serial 0/0/1: <input type="text" name="ip_s1_0" required></label>
+            <label>Màscara Serial 0/0/1: <input type="text" name="ip_s1_1" required></label>
             <input type="submit" value="Generar Configuració">
         </form>
     </div>
