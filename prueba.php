@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "! Data i hora configurada: $datetime\n";
     echo "</pre>";
     echo "interface Serial0/0/0\n ip address $ip_s0_0 $ip_s0_1\n no shutdown\n exit\n";
-    echo "interface Serial0/0/0\n clock rate $crate\n exit\n"
+    echo "interface Serial0/0/0\n clock rate $crate\n exit\n";
     echo "interface Serial0/0/1\n ip address $ip_s1_0 $ip_s1_1\n no shutdown\n exit\n";
 } else {
     echo "<p>Error: No s'ha enviat cap dada.</p>";
